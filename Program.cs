@@ -1,4 +1,4 @@
-﻿int limiteContagem = 10;
+﻿const int limiteContagem = 10;
 int contador = 0;
 
 Contador();
