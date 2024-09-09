@@ -1,20 +1,18 @@
 ﻿const int limiteContagem = 10;
-int contador = 0;
+int contador = 1;
 
 Contador();
 
 void Contador()
 {
-    contador++;
-    Thread.Sleep(1000);
+    #pragma warning disable CA1416 
+    Thread.Sleep(500);
     Console.Write($"{contador} ");
-    if (contador < limiteContagem)
+    Console.Beep(5000, 500);
+    contador++;
+    #pragma warning restore CA1416
+    if (contador <= limiteContagem)
     {
         Contador();
-    }
-
-    else 
-    {
-        return;
     }
 }
